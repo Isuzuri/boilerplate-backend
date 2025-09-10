@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import '../dotenv.js'
-import { generateSessionToken } from '../utils/jwtTokenGeneration.js'
+import { generateSessionToken } from '../utils/jwtUtils.js'
 
 
 export function refreshSessionTokenIfNeeded(req, res, next) {

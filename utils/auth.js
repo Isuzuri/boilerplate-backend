@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import '../dotenv.js'
-import { generateActionToken, generateSessionToken } from '../utils/jwtTokenGeneration.js'
+import { generateActionToken, generateSessionToken } from './jwtUtils.js'
 
 export function refreshActionToken(req, res) {
   const sessionToken = req.cookies.sessionToken

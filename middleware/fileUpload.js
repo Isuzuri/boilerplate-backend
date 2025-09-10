@@ -14,4 +14,4 @@ const storage = multer.diskStorage({
   },
 });
 
-export const uploadAvatarMiddleware = multer({ storage });
+export const fileUpload = multer({ storage });
