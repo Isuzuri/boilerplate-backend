@@ -10,6 +10,11 @@ const User = sequelize.define('User', {
     password: {
         type: DataTypes.STRING,
     },
+    avatar_url: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        defaultValue: 'https://avatar.iran.liara.run/public',
+    },
     role: {
         type: DataTypes.STRING,
         defaultValue: 'user',

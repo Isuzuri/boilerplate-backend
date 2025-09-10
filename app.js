@@ -18,6 +18,9 @@ app.use(cors({
 // Cookie connect
 app.use(cookieParser());
 
+// Uploads connect
+app.use('/uploads', express.static('uploads'));
+
 // Routes
 // app.use('/user', userRoutes)
 // app.use('/task', taskRoutes)
