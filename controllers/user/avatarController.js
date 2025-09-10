@@ -1,7 +1,7 @@
 import { User } from '../../models/User.js';
 import logger from '../../utils/logger.js';
 
-export async function avatarController(req, res, next) {
+export async function avatarUpload(req, res, next) {
   try {
     const user = await User.findByPk(req.user.id);
     if (!user) {

@@ -21,5 +21,5 @@ export function setAuthTokens(res, user) {
     sameSite: 'Strict',
     maxAge: 14 * 24 * 60 * 60 * 1000 // 14 days
   });
-  res.json({ actionToken })
+  return actionToken
 }
