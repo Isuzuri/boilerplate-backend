@@ -1,8 +1,8 @@
-export function errorHandler(err, req, res, next) {
-  logger.error(`${err.message} | ${req.method} ${req.url}`);
+export function errorHandler(error, req, res, next) {
+  logger.error(`${error.message} | ${req.method} ${req.url}`);
 
-  const status = err.status || 500;
-  const message = err.message || 'Internal Server Error';
+  const status = error.status || 500;
+  const message = error.message || 'Internal Server Error';
 
   res.status(status).json({
     success: false,

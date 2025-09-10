@@ -4,6 +4,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import './models/associations.js'
 import './config/dotenv.js'
+import { errorHandler } from './middleware/errorHandler.js';
 
 // DB connect
 export const app = express()
@@ -24,6 +25,9 @@ app.use('/uploads', express.static('uploads'));
 // Routes
 // app.use('/user', userRoutes)
 // app.use('/task', taskRoutes)
+
+// Error handler
+app.use(errorHandler);
 
 // DB Sync and Server start (if all good)
 sequelize.sync().then(() => {
